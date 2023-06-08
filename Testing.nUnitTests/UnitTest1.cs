@@ -84,5 +84,95 @@ namespace Testing.nUnitTests
             Assert.AreEqual(output, original);
 
         }
+
+        [Test]
+        public void AnalyzeTriangle_Input18and19and20_OutputvalidSCALENETriangle()
+        {
+            //Arrange
+            int side1 = 18;
+            int side2 = 19;
+            int side3 = 20;
+
+            string output = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input25and29and10_OutputvalidSCALENETriangle()
+        {
+            //Arrange
+            int side1 = 25;
+            int side2 = 29;
+            int side3 = 10;
+
+            string output = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input13and5and9_OutputvalidSCALENETriangle()
+        {
+            //Arrange
+            int side1 = 13;
+            int side2 = 5;
+            int side3 = 9;
+
+            string output = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input31and32and36_OutputvalidSCALENETriangle()
+        {
+            //Arrange
+            int side1 = 31;
+            int side2 = 32;
+            int side3 = 36;
+
+            string output = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input61and67and62_OutputvalidSCALENETriangle()
+        {
+            //Arrange
+            int side1 = 61;
+            int side2 = 67;
+            int side3 = 62;
+
+            string output = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
     }
 }
