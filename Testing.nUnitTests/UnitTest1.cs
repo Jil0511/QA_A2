@@ -176,7 +176,7 @@ namespace Testing.nUnitTests
         }
 
         [Test]
-        public void AnalyzeTriangle_Input0and3and6_OutputvalidSCALENETriangle()
+        public void AnalyzeTriangle_Input0and3and6_OutputvalidOneSideZeroTriangle()
         {
             //Arrange
             int side1 = 0;
@@ -194,7 +194,7 @@ namespace Testing.nUnitTests
         }
 
         [Test]
-        public void AnalyzeTriangle_Input0and0and5_OutputvalidSCALENETriangle()
+        public void AnalyzeTriangle_Input0and0and5_OutputvalidOneSideZeroTriangle()
         {
             //Arrange
             int side1 = 0;
@@ -212,7 +212,7 @@ namespace Testing.nUnitTests
         }
 
         [Test]
-        public void AnalyzeTriangle_Input0and82and0_OutputvalidSCALENETriangle()
+        public void AnalyzeTriangle_Input0and82and0_OutputvalidOneSideZeroTriangle()
         {
             //Arrange
             int side1 = 0;
@@ -220,6 +220,60 @@ namespace Testing.nUnitTests
             int side3 = 0;
 
             string output = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input0and82and0_OutputvalidInvalidTriangle()
+        {
+            //Arrange
+            int side1 = 2;
+            int side2 = 82;
+            int side3 = 6;
+
+            string output = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input10and100and25_OutputvalidInvalidTriangle()
+        {
+            //Arrange
+            int side1 = 10;
+            int side2 = 100;
+            int side3 = 25;
+
+            string output = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string original = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual(output, original);
+
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input30and34and95_OutputvalidInvalidTriangle()
+        {
+            //Arrange
+            int side1 = 30;
+            int side2 = 34;
+            int side3 = 95;
+
+            string output = "A triangle cannot be formed with those numbers";
 
             //Act
             string original = Triangle.AnalyzeTriangle(side1, side2, side3);
